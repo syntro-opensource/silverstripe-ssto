@@ -17,11 +17,18 @@ Additionally, a local bootstrap based theme is included.
 
 ## Installation
 
-`composer create-project syntro/ssto my-app`
+```
+composer create-project syntro/ssto my-app
+```
 
 See [Getting Started](https://docs.silverstripe.org/en/4/getting_started/) for more information.
 
 ## Documentation
+### Developing
+To start the server via docker, run
+```
+docker-compose up
+```
 
 ### Theming
 After installation, you can use the included theming tools to build
