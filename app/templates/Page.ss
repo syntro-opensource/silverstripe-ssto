@@ -25,7 +25,7 @@
     <link type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link type="text/css" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <!--CSSHEAD START-->
-    <% require themedCSS("dist/style/bundle.css") %>
+    <% require themedCSS("client/dist/style/bundle.css") %>
     <!--CSSHEAD END-->
   </head>
   <body class="d-flex flex-column" >
@@ -40,8 +40,8 @@
     </div>
     <!-- CONTENT_End -->
     <!--JSFOOT START-->
-    <% require themedJavascript("dist/js/vendors.js") %>
-    <% require themedJavascript("dist/js/bundle.js") %>
+    <% require themedJavascript("client/dist/js/vendors.js") %>
+    <% require themedJavascript("client/dist/js/bundle.js") %>
     <!--JSFOOT END-->
     <div class="flex-grow-0">
         <% include Includes/Footer %>
