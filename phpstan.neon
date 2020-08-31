@@ -1,0 +1,5 @@
+parameters:
+	autoload_directories:
+		- app
+includes:
+    - vendor/symbiote/silverstripe-phpstan/phpstan.neon

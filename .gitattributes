@@ -1,0 +1,5 @@
+.gitattributes export-ignore
+.travis.yml export-ignore
+behat.yml export-ignore
+CHANGELOG.md export-ignore
+README.md
