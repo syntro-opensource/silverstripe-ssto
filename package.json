@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "favicon": "npm-run-all favicon-create favicon-insert",
+    "favicon-create": "real-favicon generate faviconDescription.json faviconData.json app/client/dist/favicons",
+    "favicon-insert": "cp app/client/dist/favicons/html_code.html app/templates/Includes/Favicons.ss"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cli-real-favicon": "0.0.8",
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -12,16 +12,9 @@
     $MetaTags(false)
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <!--FAVICONS START--><link rel="apple-touch-icon" sizes="180x180" href="_resources/themes/orbit/dist/favicons/apple-touch-icon.png?v=BG7GjWbjGl">
-<link rel="icon" type="image/png" sizes="32x32" href="_resources/themes/orbit/dist/favicons/favicon-32x32.png?v=BG7GjWbjGl">
-<link rel="icon" type="image/png" sizes="16x16" href="_resources/themes/orbit/dist/favicons/favicon-16x16.png?v=BG7GjWbjGl">
-<link rel="manifest" href="_resources/themes/orbit/dist/favicons/site.webmanifest?v=BG7GjWbjGl">
-<link rel="mask-icon" href="_resources/themes/orbit/dist/favicons/safari-pinned-tab.svg?v=BG7GjWbjGl" color="#5bbad5">
-<link rel="shortcut icon" href="_resources/themes/orbit/dist/favicons/favicon.ico?v=BG7GjWbjGl">
-<meta name="msapplication-TileColor" content="#474747">
-<meta name="msapplication-TileImage" content="_resources/themes/orbit/dist/favicons/mstile-144x144.png?v=BG7GjWbjGl">
-<meta name="msapplication-config" content="_resources/themes/orbit/dist/favicons/browserconfig.xml?v=BG7GjWbjGl">
-<meta name="theme-color" content="#ffffff"><!--FAVICONS END-->
+    <!--FAVICONS START-->
+    <% include Includes/Favicons %>
+    <!--FAVICONS END-->
     <!--CSSHEAD START-->
     <% include Includes/Fonts %>
     <% require themedCSS("client/dist/style/bundle.css") %>
