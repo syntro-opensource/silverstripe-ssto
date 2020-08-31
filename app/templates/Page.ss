@@ -22,9 +22,8 @@
 <meta name="msapplication-TileImage" content="_resources/themes/orbit/dist/favicons/mstile-144x144.png?v=BG7GjWbjGl">
 <meta name="msapplication-config" content="_resources/themes/orbit/dist/favicons/browserconfig.xml?v=BG7GjWbjGl">
 <meta name="theme-color" content="#ffffff"><!--FAVICONS END-->
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <!--CSSHEAD START-->
+    <% include Includes/Fonts %>
     <% require themedCSS("client/dist/style/bundle.css") %>
     <!--CSSHEAD END-->
   </head>
