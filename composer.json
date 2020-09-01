@@ -16,9 +16,7 @@
     },
     "extra": {
         "expose": [
-            "app/client/dist/js",
-            "app/client/dist/style",
-            "app/client/dist/favicons",
+            "app/client/dist",
             "app/client/files"
         ],
         "project-files": [
