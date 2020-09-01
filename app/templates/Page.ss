@@ -17,7 +17,7 @@
     <!--FAVICONS END-->
     <!--CSSHEAD START-->
     <% include Includes/Fonts %>
-    <% require themedCSS("client/dist/style/bundle.css") %>
+    <% require themedCSS("client/dist/global/bundle.css") %>
     <!--CSSHEAD END-->
   </head>
   <body class="d-flex flex-column" >
@@ -32,8 +32,7 @@
     </div>
     <!-- CONTENT_End -->
     <!--JSFOOT START-->
-    <% require themedJavascript("client/dist/js/vendors.js") %>
-    <% require themedJavascript("client/dist/js/bundle.js") %>
+    <% require themedJavascript("client/dist/global/bundle.js") %>
     <!--JSFOOT END-->
     <div class="flex-grow-0">
         <% include Includes/Footer %>
