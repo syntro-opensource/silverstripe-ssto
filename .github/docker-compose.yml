@@ -13,7 +13,7 @@ x-host-defaults: &host_defaults
     SS_DATABASE_SERVER: database
     SS_DATABASE_NAME: ss_default
     SS_DATABASE_USERNAME: root
-    SS_DATABASE_PASSWORD: silverstripe
+    SS_DATABASE_PASSWORD: ''
     SS_ENVIRONMENT_TYPE: dev
     TZ: Europe/Zurich
   volumes:
@@ -22,20 +22,9 @@ x-host-defaults: &host_defaults
 services:
   database:
     image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: silverstripe
-      MYSQL_DATABASE: ss_default
-      MYSQL_USER: silverstripe
-      MYSQL_PASSWORD: silverstripe
+    env:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
       TZ: Europe/Zurich
-    ports:
-      - 3306:3306
-    healthcheck:
-            test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-            timeout: 2s
-            retries: 10
-    command:
-      - --default-authentication-plugin=mysql_native_password
 
   # Test utilities
   phpunit:
