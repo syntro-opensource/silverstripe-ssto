@@ -11,6 +11,14 @@ jobs:
     strategy:
       matrix:
         php: [7.2, 7.3, 7.4]
+    services:
+      database:
+        image: mysql:8
+        ports:
+          3306:3306
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+          TZ: Europe/Zurich
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -35,11 +43,20 @@ jobs:
           key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Install Silverstripe
+        container: composer
         env:
           COMPOSER_HOME: ${{ steps.composer-data.outputs.dir }}
-        run: docker-compose -f .github/docker-compose.yml run composer-install
+        run: composer install --ignore-platform-reqs
 
       - name: Run tests
+        container: brettt89/silverstripe-web:${{ matrix.php }}-apache
         env:
-          TAG: ${{ matrix.php }}
-        run: docker-compose -f .github/docker-compose.yml run phpunit
+          SS_DEFAULT_ADMIN_USERNAME: admin
+          SS_DEFAULT_ADMIN_PASSWORD: admin
+          SS_DATABASE_SERVER: database
+          SS_DATABASE_NAME: ss_default
+          SS_DATABASE_USERNAME: root
+          SS_DATABASE_PASSWORD: ''
+          SS_ENVIRONMENT_TYPE: dev
+          TZ: Europe/Zurich
+        run: vendor/bin/phpunit app/tests/
