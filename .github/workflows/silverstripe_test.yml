@@ -9,7 +9,7 @@ jobs:
     name: phpunit
     runs-on: ubuntu-latest
     strategy:
-    fail-fast: false
+      fail-fast: false
       matrix:
         php: [7.2, 7.3, 7.4]
     # services:
