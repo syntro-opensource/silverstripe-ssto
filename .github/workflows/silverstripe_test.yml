@@ -15,7 +15,7 @@ jobs:
       database:
         image: mysql:8
         ports:
-          3306:3306
+          - 3306:3306
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
           TZ: Europe/Zurich
