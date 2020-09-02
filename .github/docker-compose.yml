@@ -28,8 +28,8 @@ services:
       MYSQL_USER: silverstripe
       MYSQL_PASSWORD: silverstripe
       TZ: Europe/Zurich
-    expose:
-      - 3306
+    ports:
+      - 3306:3306
     link:
       - phpunit
     command:
