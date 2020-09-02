@@ -19,6 +19,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
           TZ: Europe/Zurich
+    container: brettt89/silverstripe-web:${{ matrix.php }}-apache
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -42,14 +43,11 @@ jobs:
           path: vendor
           key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
-      - name: Install Silverstripe
-        container: composer
-        env:
-          COMPOSER_HOME: ${{ steps.composer-data.outputs.dir }}
-        run: composer install --ignore-platform-reqs
+      - uses: php-actions/composer@v2
+        with:
+          command: composer install --ignore-platform-reqs
 
       - name: Run tests
-        container: brettt89/silverstripe-web:${{ matrix.php }}-apache
         env:
           SS_DEFAULT_ADMIN_USERNAME: admin
           SS_DEFAULT_ADMIN_PASSWORD: admin
