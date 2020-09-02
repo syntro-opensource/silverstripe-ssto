@@ -1,0 +1,35 @@
+name: Test Silverstripe
+on:
+  push:
+    paths-ignore:
+      - README.md
+      - LICENSE.md
+jobs:
+  test:
+    name: phpunit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [7.2, 7.3, 7.4]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get Composer Cache Directory
+        id: composer-data
+        run: |
+          echo "::set-output name=dir::$(composer config --global data-dir)"
+      - name: Cache Composer Downloads
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-data.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ matrix.php }}
+          restore-keys: |
+            ${{ runner.os }}-composer
+      - name: Install Silverstripe
+        env:
+          COMPOSER_HOME: ${{ steps.composer-data.outputs.dir }}
+        run: docker-compose -f .github/docker-compose.yml run composer-install
+      - name: Run tests
+        env:
+          TAG: ${{ matrix.php }}
+        run: docker-compose -f .github/docker-compose.yml run phpunit

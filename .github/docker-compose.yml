@@ -1,0 +1,68 @@
+version: "3.7"
+
+x-host-volume: &host-volume
+  type: volume
+  source: nfsmount
+  target: /var/www/html
+
+x-host-defaults: &host_defaults
+  image: brettt89/silverstripe-web:${TAG:-7.4}-apache
+  environment:
+    SS_DEFAULT_ADMIN_USERNAME: admin
+    SS_DEFAULT_ADMIN_PASSWORD: admin
+    SS_DATABASE_SERVER: database
+    SS_DATABASE_NAME: ss_default
+    SS_DATABASE_USERNAME: root
+    SS_DATABASE_PASSWORD: silverstripe
+    SS_ENVIRONMENT_TYPE: dev
+    TZ: Europe/Zurich
+  volumes:
+    - << : *host-volume
+
+services:
+  database:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: silverstripe
+      MYSQL_DATABASE: ss_default
+      MYSQL_USER: silverstripe
+      MYSQL_PASSWORD: silverstripe
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: volume
+        source: syntro-data
+        target: /var/lib/mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --default-time-zone=+02:00
+
+  # Test utilities
+  phpunit:
+    restart: 'no'
+    << : *host_defaults
+    command: vendor/bin/phpunit app/tests/
+    depends_on:
+      - database
+  phpstan:
+    restart: 'no'
+    << : *host_defaults
+    command: vendor/bin/phpstan analyse app/src --memory-limit=1G -c phpstan.neon -a vendor/symbiote/silverstripe-phpstan/bootstrap.php --no-ansi --level 4
+  phpcs:
+    restart: 'no'
+    << : *host_defaults
+    command: vendor/bin/phpcs app/
+  phpcbf:
+    restart: 'no'
+    << : *host_defaults
+    command: vendor/bin/phpcbf app/
+  composer-install:
+    image: composer
+    restart: 'no'
+    command: composer install --ignore-platform-reqs
+    volumes:
+      - ./:/app
+      - ${COMPOSER_HOME:-~/.composer}:/tmp
+
+volumes:
+  syntro-data:
