@@ -23,7 +23,7 @@ services:
   database:
     image: mysql:8
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       TZ: Europe/Zurich
 
   # Test utilities
