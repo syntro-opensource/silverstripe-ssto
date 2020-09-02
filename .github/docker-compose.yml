@@ -17,7 +17,7 @@ x-host-defaults: &host_defaults
     SS_ENVIRONMENT_TYPE: dev
     TZ: Europe/Zurich
   volumes:
-    - './:/var/www/html'
+    - '${PWD}:/var/www/html'
 
 services:
   database:
@@ -61,7 +61,7 @@ services:
     restart: 'no'
     command: composer install --ignore-platform-reqs
     volumes:
-      - ./:/app
+      - ${PWD}:/app
       - ${COMPOSER_HOME:-~/.composer}:/tmp
 
 volumes:
