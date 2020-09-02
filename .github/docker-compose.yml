@@ -30,6 +30,8 @@ services:
       TZ: Europe/Zurich
     expose:
       - 3306
+    link:
+      - phpunit
     command:
       - --default-authentication-plugin=mysql_native_password
 
