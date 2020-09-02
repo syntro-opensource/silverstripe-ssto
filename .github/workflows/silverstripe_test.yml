@@ -11,14 +11,14 @@ jobs:
     strategy:
       matrix:
         php: [7.2, 7.3, 7.4]
-    services:
-      database:
-        image: mysql:8
-        ports:
-          - 3306:3306
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-          TZ: Europe/Zurich
+    # services:
+    #   database:
+    #     image: mysql:8
+    #     ports:
+    #       - 3306:3306
+    #     env:
+    #       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    #       TZ: Europe/Zurich
     container: brettt89/silverstripe-web:${{ matrix.php }}-apache
     steps:
       - name: Checkout code
@@ -51,10 +51,10 @@ jobs:
         env:
           SS_DEFAULT_ADMIN_USERNAME: admin
           SS_DEFAULT_ADMIN_PASSWORD: admin
-          SS_DATABASE_SERVER: database
+          SS_DATABASE_SERVER: localhost
           SS_DATABASE_NAME: ss_default
           SS_DATABASE_USERNAME: root
-          SS_DATABASE_PASSWORD: ''
+          SS_DATABASE_PASSWORD: root
           SS_ENVIRONMENT_TYPE: dev
           TZ: Europe/Zurich
         run: vendor/bin/phpunit app/tests/
