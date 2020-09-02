@@ -45,7 +45,7 @@ jobs:
 
       - uses: php-actions/composer@v2
         with:
-          command: composer install --ignore-platform-reqs
+          command: install --ignore-platform-reqs
 
       - name: Run tests
         env:
