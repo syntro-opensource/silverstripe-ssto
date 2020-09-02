@@ -30,7 +30,7 @@ services:
       TZ: Europe/Zurich
     ports:
       - 3306:3306
-    link:
+    links:
       - phpunit
     command:
       - --default-authentication-plugin=mysql_native_password
