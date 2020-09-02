@@ -14,14 +14,14 @@ jobs:
     services:
       database:
         image: mysql:8
-        environment:
+        env:
           MYSQL_ROOT_PASSWORD: silverstripe
           MYSQL_DATABASE: ss_default
           MYSQL_USER: silverstripe
           MYSQL_PASSWORD: silverstripe
           TZ: Europe/Zurich
-        expose:
-          - 3306
+        ports:
+          - 3306:3306
         command:
           - --default-authentication-plugin=mysql_native_password
     steps:
