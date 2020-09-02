@@ -22,7 +22,7 @@ x-host-defaults: &host_defaults
 services:
   database:
     image: mysql:8
-    env:
+    environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
       TZ: Europe/Zurich
 
