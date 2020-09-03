@@ -8,7 +8,7 @@ on:
       - CONTRIBUTING.md
       - code-of-conduct.md
       - LICENSE.md
-      - CHANGELOG*
+      - CHANGELOG.md
       - webpack.config.js
       - package.json
       - package-lock.json

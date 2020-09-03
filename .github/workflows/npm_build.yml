@@ -8,7 +8,7 @@ on:
       - CONTRIBUTING.md
       - code-of-conduct.md
       - LICENSE.md
-      - CHANGELOG*
+      - CHANGELOG.md
       - composer.json
       - docker-compose.yml
       - faviconDescription.json
