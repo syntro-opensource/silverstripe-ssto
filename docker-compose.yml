@@ -69,13 +69,18 @@ services:
     restart: 'no'
     << : *host_defaults
     command: vendor/bin/phpcbf app/
+  npm:
+    image: node
+    restart: no
+    working_dir: /var/www/html
+    volumes:
+      - << : *host-volume
   composer:
     image: composer
     restart: 'no'
+    working_dir: /var/www/html
     volumes:
-      - type: volume
-        source: nfsmount
-        target: /app
+      - << : *host-volume
 
 volumes:
   syntro-data:

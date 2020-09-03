@@ -48,9 +48,9 @@ docker run \
 
 
 ## Documentation
-We employ a docker-centered approach to development. While you are required to
+We employ a docker-centered approach to development. While we recommend to
 install [node and npm](https://nodejs.org/en/download/package-manager/)
-yourself, you only need [docker](https://docs.docker.com/get-docker/) for the
+yourself, you really only need [docker](https://docs.docker.com/get-docker/) for the
 LAMP part. After you have installed npm and docker, you can make use of the
 following commands to dive into silverstripe development.
 
