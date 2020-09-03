@@ -2,8 +2,17 @@ name: Test Silverstripe
 on:
   push:
     paths-ignore:
+      - .editorconfig
+      - .gitattributes
       - README.md
       - LICENSE.md
+      - CHANGELOG*
+      - webpack.config.js
+      - package.json
+      - package-lock.json
+      - docker-compose.yml
+      - faviconDescription.json
+      - .github/**
 jobs:
   test:
     name: phpunit
