@@ -5,6 +5,8 @@ on:
       - .editorconfig
       - .gitattributes
       - README.md
+      - CONTRIBUTING.md
+      - code-of-conduct.md
       - LICENSE.md
       - CHANGELOG*
       - composer.json
