@@ -50,8 +50,7 @@ docker run \
 ## Documentation
 We employ a docker-centered approach to development. While we recommend to
 install [node and npm](https://nodejs.org/en/download/package-manager/)
-yourself, you really only need [docker](https://docs.docker.com/get-docker/) for the
-LAMP part. After you have installed npm and docker, you can make use of the
+yourself, you really only need [docker](https://docs.docker.com/get-docker/). After you have installed docker, you can make use of the
 following commands to dive into silverstripe development.
 
 > By default, our docker-compose setup is geared towards macOS. You can however
