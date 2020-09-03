@@ -1,3 +1,10 @@
+# We use NFS mounts to speed up development on macOS. See
+# https://firehydrant.io/blog/nfs-with-docker-on-macos-catalina/
+# for information.
+# If you are working on Linux, you will have to replace the nfs volume
+# with a bind one.
+
+
 version: "3.7"
 
 x-host-volume: &host-volume
@@ -77,4 +84,4 @@ volumes:
     driver_opts:
       type: nfs
       o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
-      device: ":/System/Volumes/Data/${PWD}"
+      device: ":${PWD}"
