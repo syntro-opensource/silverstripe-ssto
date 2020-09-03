@@ -12,50 +12,76 @@ jobs:
       fail-fast: false
       matrix:
         php: [7.2, 7.3, 7.4]
-    # services:
-    #   database:
-    #     image: mysql:8
-    #     ports:
-    #       - 3306:3306
-    #     env:
-    #       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-    #       TZ: Europe/Zurich
+    services:
+      database:
+        image: mysql:5.7
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+          TZ: Europe/Zurich
     container: brettt89/silverstripe-web:${{ matrix.php }}-apache
+    env:
+      SS_DEFAULT_ADMIN_USERNAME: admin
+      SS_DEFAULT_ADMIN_PASSWORD: admin
+      SS_DATABASE_SERVER: database
+      SS_DATABASE_NAME: ss_default_${{ matrix.php }}
+      SS_DATABASE_USERNAME: root
+      SS_DATABASE_PASSWORD: ''
+      SS_ENVIRONMENT_TYPE: dev
+      TZ: Europe/Zurich
     steps:
+      - name: Cache Composer Binary
+        uses: actions/cache@v1
+        with:
+          path: /usr/local/bin/composer
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('/usr/local/bin/composer') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+
+      - name: Install Composer
+        run: |
+          curl \
+            -sS https://getcomposer.org/installer \
+            | php && \
+            mv -f composer.phar /usr/local/bin/composer
+
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Get Composer Cache Directory
-      #   id: composer-data
-      #   run: |
-      #     echo "::set-output name=dir::$(composer config --global data-dir)"
-      #
-      # - name: Cache Composer Downloads
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: ${{ steps.composer-data.outputs.dir }}
-      #     key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-composer
+      - name: Get Composer Cache Directory
+        id: composer-data
+        run: |
+          echo "::set-output name=dir::$(composer config --global data-dir)"
 
-      - name: Cache PHP dependencies
+      - name: Cache Composer Downloads
         uses: actions/cache@v1
         with:
-          path: vendor
-          key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          path: ${{ steps.composer-data.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+      #
+      # - name: Cache PHP dependencies
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: vendor
+      #     key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
-      - uses: php-actions/composer@v2
-        with:
-          command: install --ignore-platform-reqs
+      - name: Install Dependencies
+        run: composer install
 
-      - name: Run tests
-        env:
-          SS_DEFAULT_ADMIN_USERNAME: admin
-          SS_DEFAULT_ADMIN_PASSWORD: admin
-          SS_DATABASE_SERVER: localhost
-          SS_DATABASE_NAME: ss_default
-          SS_DATABASE_USERNAME: root
-          SS_DATABASE_PASSWORD: root
-          SS_ENVIRONMENT_TYPE: dev
-          TZ: Europe/Zurich
+      - name: Run Linter
+        run: vendor/bin/phpcs app/
+
+      - name: Run PHPStan
+        run:  |
+          vendor/bin/phpstan analyse app/src \
+            --memory-limit=1G \
+            -c phpstan.neon \
+            -a vendor/symbiote/silverstripe-phpstan/bootstrap.php \
+            --no-ansi \
+            --level 4
+
+      - name: Run Unit tests
         run: vendor/bin/phpunit app/tests/
