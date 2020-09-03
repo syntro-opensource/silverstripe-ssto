@@ -22,6 +22,21 @@ jobs:
     #       TZ: Europe/Zurich
     container: brettt89/silverstripe-web:${{ matrix.php }}-apache
     steps:
+      - name: Cache Composer Binary
+        uses: actions/cache@v1
+        with:
+          path: /usr/local/bin/composer
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('/usr/local/bin/composer') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+
+      - name: Install Composer
+        run: |
+          curl \
+            -sS https://getcomposer.org/installer \
+            | php && \
+            mv -f composer.phar /usr/local/bin/composer
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -44,18 +59,17 @@ jobs:
       #     path: vendor
       #     key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
-      - uses: php-actions/composer@v2
-        with:
-          command: install --ignore-platform-reqs
+      - name: Install Dependencie
+        run: composer install
 
-      - name: Run tests
-        env:
-          SS_DEFAULT_ADMIN_USERNAME: admin
-          SS_DEFAULT_ADMIN_PASSWORD: admin
-          SS_DATABASE_SERVER: localhost
-          SS_DATABASE_NAME: ss_default
-          SS_DATABASE_USERNAME: root
-          SS_DATABASE_PASSWORD: root
-          SS_ENVIRONMENT_TYPE: dev
-          TZ: Europe/Zurich
-        run: vendor/bin/phpunit app/tests/
+      # - name: Run tests
+      #   env:
+      #     SS_DEFAULT_ADMIN_USERNAME: admin
+      #     SS_DEFAULT_ADMIN_PASSWORD: admin
+      #     SS_DATABASE_SERVER: localhost
+      #     SS_DATABASE_NAME: ss_default
+      #     SS_DATABASE_USERNAME: root
+      #     SS_DATABASE_PASSWORD: root
+      #     SS_ENVIRONMENT_TYPE: dev
+      #     TZ: Europe/Zurich
+      #   run: vendor/bin/phpunit app/tests/
