@@ -56,7 +56,7 @@ following commands to dive into silverstripe development.
 > By default, our docker-compose setup is geared towards macOS. You can however
 > gear it towards linux by using a bind volume instead of a nfs one.
 > for this, simply change the volume to
-> ```
+> ```yaml
 > x-host-volume: &host-volume
 >   type: bind
 >   source: ./
