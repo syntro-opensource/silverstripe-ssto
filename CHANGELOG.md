@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-09-03
+* Initial release
+
 
 [Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.0.0..master
 [1.0.0]: https://github.com/syntro-opensource/silverstripe-ssto/tree/1.0.0
