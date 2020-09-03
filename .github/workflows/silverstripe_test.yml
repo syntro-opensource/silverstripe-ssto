@@ -40,18 +40,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Get Composer Cache Directory
-      #   id: composer-data
-      #   run: |
-      #     echo "::set-output name=dir::$(composer config --global data-dir)"
-      #
-      # - name: Cache Composer Downloads
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: ${{ steps.composer-data.outputs.dir }}
-      #     key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-composer
+      - name: Get Composer Cache Directory
+        id: composer-data
+        run: |
+          echo "::set-output name=dir::$(composer config --global data-dir)"
+
+      - name: Cache Composer Downloads
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-data.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
       #
       # - name: Cache PHP dependencies
       #   uses: actions/cache@v1
@@ -59,7 +59,7 @@ jobs:
       #     path: vendor
       #     key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
-      - name: Install Dependencie
+      - name: Install Dependencies
         run: composer install
 
       # - name: Run tests
