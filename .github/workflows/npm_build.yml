@@ -1,0 +1,32 @@
+name: Test Theme Build
+on:
+  push:
+    paths-ignore:
+      - .editorconfig
+      - .gitattributes
+      - README.md
+      - LICENSE.md
+      - CHANGELOG*
+      - composer.json
+      - docker-compose.yml
+      - faviconDescription.json
+      - .github/dependabot.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run build command
+      run: npm run build

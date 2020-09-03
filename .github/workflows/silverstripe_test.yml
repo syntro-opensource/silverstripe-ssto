@@ -12,10 +12,10 @@ on:
       - package-lock.json
       - docker-compose.yml
       - faviconDescription.json
-      - .github/**
+      - .github/dependabot.yml
 jobs:
   test:
-    name: phpunit
+    name: Silverstripe Tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
