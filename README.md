@@ -1,6 +1,7 @@
 # Syntro Silverstripe SSTO
 
-[![Build Status](https://img.shields.io/github/workflow/status/syntro-opensource/silverstripe-ssto/Test%20Silverstripe/master)](https://github.com/syntro-opensource/silverstripe-ssto/actions?query=branch%3Amaster)
+[![Build Status PHP](https://img.shields.io/github/workflow/status/syntro-opensource/silverstripe-ssto/Test%20Silverstripe/master?label=Silverstripe%20Tests&logo=github)](https://github.com/syntro-opensource/silverstripe-ssto/actions?query=branch%3Amaster)
+[![Build Status Bundles](https://img.shields.io/github/workflow/status/syntro-opensource/silverstripe-ssto/Test%20Theme%20Build/master?label=Buildable%20bundles&logo=github)](https://github.com/syntro-opensource/silverstripe-ssto/actions?query=branch%3Amaster)
 ![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen?logo=dependabot)
 [![composer](https://img.shields.io/packagist/dt/syntro/ssto?color=success&logo=composer)](https://packagist.org/packages/syntro/ssto)
 [![Packagist Version](https://img.shields.io/packagist/v/syntro/ssto?label=stable&logo=composer)](https://packagist.org/packages/syntro/ssto)
