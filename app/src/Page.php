@@ -4,7 +4,6 @@ namespace {
 
     use SilverStripe\CMS\Model\SiteTree;
 
-
     /**
      * The default Page class
      *
