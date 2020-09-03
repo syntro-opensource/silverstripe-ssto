@@ -2,6 +2,12 @@
     "name": "syntro/ssto",
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer for Syntro Projects",
+    "keywords": [
+        "silverstripe",
+        "recipe",
+        "CMS"
+    ],
+    "license": "BSD-3-Clause",
     "require": {
         "php": ">=7.2.0",
         "silverstripe/recipe-plugin": "^1.2",
