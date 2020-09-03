@@ -24,6 +24,7 @@
             "app/_config/*",
             "app/tests/*",
             "app/client/*",
+            "app/src/*",
             "app/templates/*",
             ".editorconfig",
             ".gitignore",
