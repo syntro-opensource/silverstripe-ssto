@@ -54,7 +54,16 @@ yourself, you really only need [docker](https://docs.docker.com/get-docker/). Af
 following commands to dive into silverstripe development.
 
 > By default, our docker-compose setup is geared towards macOS. You can however
-> gear it towards linux this by using a bind volume instead of a nfs bind.
+> gear it towards linux by using a bind volume instead of a nfs one.
+> for this, simply change the volume to
+> ```
+> x-host-volume: &host-volume
+>   type: bind
+>   source: ./
+>   target: /var/www/html
+> ```
+> We are open for feedback concerning permission errors. Please [open an issue](https://github.com/syntro-opensource/silverstripe-ssto/issues)
+> if you stumble upon problems!
 
 ### Maintenance
 #### Serving Silverstripe
