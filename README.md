@@ -6,6 +6,25 @@
 [![composer](https://img.shields.io/packagist/dt/syntro/ssto?color=success&logo=composer)](https://packagist.org/packages/syntro/ssto)
 [![Packagist Version](https://img.shields.io/packagist/v/syntro/ssto?label=stable&logo=composer)](https://packagist.org/packages/syntro/ssto)
 
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Documentation](#documentation)
+	- [Maintenance](#maintenance)
+		- [Serving Silverstripe](#serving-silverstripe)
+		- [Installing dependencies](#installing-dependencies)
+	- [Theming](#theming)
+		- [Installing dependencies](#installing-dependencies)
+		- [Developing the theme](#developing-the-theme)
+		- [Favicon](#favicon)
+	- [Testing](#testing)
+- [Maintainers](#maintainers)
+- [Bugtracker](#bugtracker)
+- [Development and contribution](#development-and-contribution)
+
+<!-- /TOC -->
+
 ## Overview
 
 Base project folder for a SilverStripe ([https://silverstripe.org](http://silverstripe.org)) installation. Required modules are installed via [https://github.com/silverstripe/recipe-cms](http://github.com/silverstripe/recipe-cms).
