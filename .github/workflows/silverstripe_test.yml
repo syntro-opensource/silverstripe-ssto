@@ -42,13 +42,6 @@ jobs:
       SS_ENVIRONMENT_TYPE: dev
       TZ: Europe/Zurich
     steps:
-      # - name: Cache Composer Binary
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: /usr/local/bin/composer
-      #     key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('/usr/local/bin/composer') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-composer-${{ matrix.php }}-
 
       - name: Install Composer
         run: |
@@ -72,12 +65,6 @@ jobs:
           key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-${{ matrix.php }}-
-      #
-      # - name: Cache PHP dependencies
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: vendor
-      #     key: ${{ runner.OS }}-build-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Install Dependencies
         run: composer install
