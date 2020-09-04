@@ -71,7 +71,7 @@ services:
     command: vendor/bin/phpcbf app/
   npm:
     image: node
-    restart: no
+    restart: 'no'
     working_dir: /var/www/html
     volumes:
       - << : *host-volume

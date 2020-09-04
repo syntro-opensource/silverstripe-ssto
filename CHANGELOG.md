@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Specified a reason for using base composer image
 * correctly ignore changelog for builds
 
+### Fixed:
+* Fixed a Bug in `docker-compose.yml` which made it invalid
+
 ## [1.0.1] - 2020-09-03
 ### Added
 * Added license
