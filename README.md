@@ -78,6 +78,14 @@ docker-compose down
 ```
 
 #### Installing dependencies
+
+> Currently, the base Silverstripe image does not provide composer natively.
+> We do not want to include a build in the development process as this might
+> complicate updating this repo and especially generated projects in the long
+> run. As the original composer image is missing some extensions for running
+> silverstripe, you have to append `--ignore-platform-reqs` to every composer
+> command
+
 You can install dependencies by using
 ```
 docker-compose run --rm composer require new/module --ignore-platform-reqs

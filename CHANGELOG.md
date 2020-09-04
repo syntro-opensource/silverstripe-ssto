@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+* Specified a reason for using base composer image
 * correctly ignore changelog for builds
 
 ## [1.0.1] - 2020-09-03
