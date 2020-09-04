@@ -1,0 +1,21 @@
+.topper {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: theme-color(primary);
+  transition: transform .5s, opacity .5s;
+  @extend .text-white;
+  &--out {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  &--in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

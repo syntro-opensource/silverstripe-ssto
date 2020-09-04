@@ -30,7 +30,7 @@
                     &copy $Now.Format(YYYY), $SiteConfig.Title
                 </div>
                 <div class="my-2 col-12 col-md-6 text-center text-md-right">
-                    Gestaltet und Implementiert mit <i class="fas fa-heart" style="color:#c84545"></i><span class="sr-only">Liebe</span> von <a class="text-muted" target="__blank" href="https://syntro.ch">Syntro GmbH</a>
+                    Gestaltet und Implementiert mit <i class="fas fa-heart SyntroHeart" style="color:#cc4e4e"></i><span class="sr-only">Liebe</span> von <a class="text-muted" target="__blank" href="https://syntro.ch">Syntro GmbH</a>
                 </div>
             </div>
 
