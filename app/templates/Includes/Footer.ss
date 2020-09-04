@@ -1,25 +1,12 @@
-<footer class="footer bg-secondary text-white">
-    <div class="container py-4">
-        <div class="row align-items-end">
-            <div class="my-2 col-12 col-md-5">
-                <h5 class="no-line">$SiteConfig.Title</h5>
-                <address class="m-0">
-	                   Universitätstrasse 31<br>
-                       8006 Zürich<br>
-                       Schweiz
-                </address>
+<footer class="footer">
+    <div class="container py-5">
+        <div class="mp-2 row align-items-center">
+            <div class="col-12 col-md-5 text-center text-md-left mb-3 mb-md-0">
+                <h4 class="mb-0">$SiteConfig.Title</h4>
             </div>
-            <div class="my-2 col-12 col-md-4 text-left text-md-left">
-                <i class="fas fa-phone-alt"></i> $SiteConfig.Phone<br>
-                <i class="fas fa-at"></i> $SiteConfig.Email
-            </div>
-            <div class="my-2 col-12 col-md-3 text-left text-md-right">
-                <% if SiteConfig.Imprint %>
-                    <a class="text-white" href="$SiteConfig.Imprint.Link">Imprint</a><br>
-                <% end_if %>
-                <% if SiteConfig.Privacy %>
-                    <a class="text-white" href="$SiteConfig.Privacy.Link">Privacy Policy</a><br>
-                <% end_if %>
+            <div class="col-12 col-md-7 text-center text-md-right">
+                <a href="#" class="mx-4">Privacy</a>
+                <a href="#" class="mr-md-0 mx-4">Terms & Conditions</a>
             </div>
         </div>
     </div>
@@ -30,7 +17,7 @@
                     &copy $Now.Format(YYYY), $SiteConfig.Title
                 </div>
                 <div class="my-2 col-12 col-md-6 text-center text-md-right">
-                    Gestaltet und Implementiert mit <i class="fas fa-heart" style="color:#c84545"></i><span class="sr-only">Liebe</span> von <a class="text-muted" target="__blank" href="https://syntro.ch">Syntro GmbH</a>
+                    Gestaltet und Implementiert mit <i class="fas fa-heart SyntroHeart" style="color:#cc4e4e"></i><span class="sr-only">Liebe</span> von <a class="text-muted" target="__blank" href="https://syntro.ch">Syntro GmbH</a>
                 </div>
             </div>
 

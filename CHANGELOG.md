@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * Specified a reason for using base composer image
 * correctly ignore changelog for builds
+* apply a more (defaulty) template (#7)
 
 ### Fixed:
 * Fixed a Bug in `docker-compose.yml` which made it invalid

@@ -1,3 +1,4 @@
 import 'bootstrap';
+import './js/topper';
 
-import './bundle.scss';
+import './style/bundle.scss';
