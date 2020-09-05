@@ -84,6 +84,7 @@ following commands to dive into silverstripe development.
 > We are open for feedback concerning permission errors. Please [open an issue](https://github.com/syntro-opensource/silverstripe-ssto/issues)
 > if you stumble upon problems!
 
+Befor you can use the NFS-based volumes on macOS, you have to follow [these steps](https://firehydrant.io/blog/nfs-with-docker-on-macos-catalina/)
 ### Maintenance
 #### Serving Silverstripe
 To start the server via docker, run
