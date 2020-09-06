@@ -8,7 +8,11 @@
   <head>
     <meta charset="utf-8">
     <%base_tag %>
-    <title><%if MetaTitle %>$MetaTitle<%else %>$Title - $SiteConfig.Title<%end_if %></title>
+    <% if MetaTitle %>
+        <title>$MetaTitle</title>
+    <% else %>
+        <title>$Title | $SiteConfig.Title</title>
+    <% end_if %>
     $MetaTags(false)
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">

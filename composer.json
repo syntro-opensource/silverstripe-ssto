@@ -13,7 +13,8 @@
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "4.6.1",
         "silverstripe/login-forms": "4.2.1",
-        "syntro/recipe-elemental-bootstrap": "0.1.1"
+        "syntro/recipe-elemental-bootstrap": "0.1.1",
+        "syntro/silverstripe-seo": "1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
