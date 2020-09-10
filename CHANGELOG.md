@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🆕 Added
 * `syntro/silverstripe-seo`
 ### ⬆️ Updated
-* @syntro-opensource/webpack-config from 1.0.1 to 1.0.2
+* @syntro-opensource/webpack-config from 1.0.1 to 1.0.3 ([#9](https://github.com/syntro-opensource/silverstripe-ssto/pull/9) & [#11](https://github.com/syntro-opensource/silverstripe-ssto/pull/11))
 
 ## [1.1.0] - 2020-09-04
 ### Changed
