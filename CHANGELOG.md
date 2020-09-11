@@ -5,9 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🆕 Added
+
 
 ## [1.2.0] - 2020-09-10
-### 🆕 Added
+###
 * `syntro/silverstripe-seo`
 ### ⬆️ Updated
 * @syntro-opensource/webpack-config from 1.0.1 to 1.0.3 ([#9](https://github.com/syntro-opensource/silverstripe-ssto/pull/9) & [#11](https://github.com/syntro-opensource/silverstripe-ssto/pull/11))
