@@ -12,7 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@syntro-opensource/browserslist-config-base": "^1.0.0",
-    "@syntro-opensource/eslint-config-base": "^1.0.0",
+    "@syntro-opensource/eslint-config-base": "^1.0.1",
     "@syntro-opensource/webpack-config": "^1.0.3",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
