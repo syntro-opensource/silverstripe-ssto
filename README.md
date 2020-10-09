@@ -58,7 +58,7 @@ docker run \
     1. Place the desired logo/image in `app/client/files/favicon.png`
     2. Update colors in `faviconDescription.json` to suit your needs
     3. Run `npm run favicon`
-* [ ] Replace `CHANGELOG.md` with `CHANGELOG.template.md` and correct the links
+* [ ] update the `.chglog/config.yml` with your new repositrory URL and run `git-chglog > CHANGELOG.md`
 * [ ] Adapt the Theme to your needs
 * [ ] Remove the sections above this message and write your own introduction
 
