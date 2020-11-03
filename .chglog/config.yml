@@ -13,6 +13,7 @@ options:
         - remove
         - deprecate
         - Bump
+        - Update
   commit_groups:
     title_maps:
       add: 🍰 Added
@@ -20,7 +21,8 @@ options:
       change: 🔧 Changed
       deprecate: 💀 Deprecated
       remove: 🗑 Removed
-      Bump: 🧬 Dependencies
+      Bump: 🧬 NPM Dependencies
+      Update: 🧬 Composer Dependencies
   header:
     pattern: "^(\\w*)\\:?\\s(.*)$"
     pattern_maps:
