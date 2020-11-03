@@ -1,3 +1,15 @@
-@import 'bootstrap/main';
+@import 'bootstrap';
+@import 'mixins/main';
+@import 'components/main';
+@import 'elements/main';
 @import 'syntro';
 @import 'fontawesome';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: $navbar-height;
+}
