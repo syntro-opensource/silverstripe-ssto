@@ -1,0 +1,121 @@
+name: 🎭 Tests
+on:
+  - push
+env:
+  DB: MYSQL
+  PDO: 1
+  SS_ENVIRONMENT_TYPE: "dev"
+  RECIPE_CMS_VERSION: 4.x-dev
+jobs:
+  phpunit:
+    name: 🧩 PHPUnit
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php:
+          - 7.1
+          - 7.2
+          - 7.3
+          - 7.4
+    container: brettt89/silverstripe-web:${{ matrix.php }}-apache
+    services:
+      database:
+        image: mysql:5.7
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    env:
+      SS_DEFAULT_ADMIN_USERNAME: admin
+      SS_DEFAULT_ADMIN_PASSWORD: admin
+      SS_DATABASE_SERVER: database
+      SS_DATABASE_NAME: ss_default_${{ matrix.php }}
+      SS_DATABASE_USERNAME: root
+      SS_DATABASE_PASSWORD: ''
+      SS_ENVIRONMENT_TYPE: dev
+    steps:
+      - name: Install Composer
+        run: |
+          curl \
+            -sS https://getcomposer.org/installer \
+            | php && \
+            mv -f composer.phar /usr/local/bin/composer
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get Composer Cache Directory
+        id: composer-data
+        run: |
+          echo "::set-output name=dir::$(composer config --global data-dir)"
+      - name: Cache Composer Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ${{ steps.composer-data.outputs.dir }}
+            **/vendors
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+      - name: Install Dependencies
+        run: composer install
+      - name: run phpunit
+        run: vendor/bin/phpunit -c "phpunit.xml" app/tests/
+      # Optional, enable if your repo is using codecov
+      # - name: generate coverage
+      #   run: phpdbg -qrr vendor/bin/phpunit -dmemory_limit=512M --coverage-clover=coverage.xml tests/
+      #   if: ${{ matrix.php == '7.4' }}
+      # - name: submit coverage
+      #   uses: codecov/codecov-action@v1
+      #   with:
+      #     file: ./coverage.xml
+      #   if: ${{ matrix.php == '7.4' }}
+  phpstan:
+    name: 🔺 PHPStan
+    runs-on: ubuntu-latest
+    container: brettt89/silverstripe-web:7.4-apache
+    steps:
+      - name: Install Composer
+        run: |
+          curl \
+            -sS https://getcomposer.org/installer \
+            | php && \
+            mv -f composer.phar /usr/local/bin/composer
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get Composer Cache Directory
+        id: composer-data
+        run: |
+          echo "::set-output name=dir::$(composer config --global data-dir)"
+      - name: Cache Composer Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ${{ steps.composer-data.outputs.dir }}
+            **/vendors
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+      - name: Install Dependencies
+        run: composer install
+      - name: Run PHPStan
+        run:  |
+          vendor/bin/phpstan analyse app/src \
+            --memory-limit=1G \
+            -c phpstan.neon \
+            -a vendor/symbiote/silverstripe-phpstan/bootstrap.php \
+            --no-ansi \
+            --level 4
+  phpcs:
+    name: 🔮 PHPcs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: lint source
+        uses: chindit/actions-phpcs@master
+        with:
+          dir: src/
+      - name: lint tests
+        uses: chindit/actions-phpcs@master
+        with:
+          dir: tests/
