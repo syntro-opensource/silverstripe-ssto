@@ -21,7 +21,7 @@ options:
       change: 🔧 Changed
       deprecate: 💀 Deprecated
       remove: 🗑 Removed
-      Bump: 🧬 NPM Dependencies
+      Bump: 🧬 Dependencies
       Update: 🧬 Composer Dependencies
   header:
     pattern: "^(\\w*)\\:?\\s(.*)$"
