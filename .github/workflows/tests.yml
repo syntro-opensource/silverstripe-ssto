@@ -14,7 +14,6 @@ jobs:
       fail-fast: false
       matrix:
         php:
-          - 7.1
           - 7.2
           - 7.3
           - 7.4
@@ -71,6 +70,7 @@ jobs:
       #   if: ${{ matrix.php == '7.4' }}
   phpstan:
     name: 🔺 PHPStan
+    needs: phpunit
     runs-on: ubuntu-latest
     container: brettt89/silverstripe-web:7.4-apache
     steps:
@@ -86,13 +86,13 @@ jobs:
         id: composer-data
         run: |
           echo "::set-output name=dir::$(composer config --global data-dir)"
-      - name: Cache Composer Cache
+      - name: Cache Composer Cache and dependencies
         uses: actions/cache@v2
         with:
           path: |
             ${{ steps.composer-data.outputs.dir }}
             **/vendors
-          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-composer-7.4-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-${{ matrix.php }}-
       - name: Install Dependencies
@@ -111,11 +111,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: lint source
+      - name: lint
         uses: chindit/actions-phpcs@master
         with:
-          dir: src/
-      - name: lint tests
-        uses: chindit/actions-phpcs@master
-        with:
-          dir: tests/
+          dir: app/
