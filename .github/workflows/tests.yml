@@ -1,6 +1,19 @@
 name: 🎭 Tests
 on:
-  - push
+  push:
+    paths-ignore:
+      - .chglog/**
+      - .github/dependabot.yml
+      - public/**
+      - .editorconfig
+      - .gitattributes
+      - .gitignore
+      - .htaccess
+      - CHANGELOG.md
+      - code-of-conduct.md
+      - CONTRIBUTING.md
+      - LICENSE.md
+      - README.md
 env:
   DB: MYSQL
   PDO: 1
@@ -115,3 +128,27 @@ jobs:
         uses: chindit/actions-phpcs@master
         with:
           dir: app/
+
+  npm-build:
+    name: 🖼 Test Theme Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+    - name: Cache Node dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          **/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install dependencies
+      run: npm install
+    - name: Run build command
+      run: npm run build
