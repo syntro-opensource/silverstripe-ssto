@@ -46,6 +46,8 @@ Or if you do not have a local composer installation and want to use docker:
 npx ssdev init
 ```
 (see [ssdev](https://github.com/syntro-opensource/ssdev) for more info.)
+
+
 ---
 **When creating a new project using this recipe, follow these steps to customize your project:**
 
