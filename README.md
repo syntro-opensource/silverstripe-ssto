@@ -43,14 +43,11 @@ composer create-project syntro/ssto my-app
 ```
 Or if you do not have a local composer installation and want to use docker:
 ```
-docker run \
-    -v ${PWD}:/app \
-    composer \
-    create-project syntro/ssto my-app --ignore-platform-reqs
+npx ssdev init
 ```
-
+(see [ssdev](https://github.com/syntro-opensource/ssdev) for more info.)
 ---
-**When Installing this recipe using `create-project`, follow these steps to customize your project:**
+**When creating a new project using this recipe, follow these steps to customize your project:**
 
 * [ ] Rename the project in the `composer.json` file
 * [ ] Adapt/delete the workflows in `.github/workflows` to suit your needs
@@ -58,7 +55,7 @@ docker run \
     1. Place the desired logo/image in `app/client/files/favicon.png`
     2. Update colors in `faviconDescription.json` to suit your needs
     3. Run `npm run favicon`
-* [ ] update the `.chglog/config.yml` with your new repositrory URL and run `git-chglog > CHANGELOG.md`
+* [ ] update the `.chglog/config.yml` with your new repositrory URL and run `git-chglog --next-tag Unreleased > CHANGELOG.md`
 * [ ] Adapt the Theme to your needs
 * [ ] Remove the sections above this message and write your own introduction
 
@@ -67,34 +64,19 @@ docker run \
 
 
 ## Documentation
-We employ a docker-centered approach to development. While we recommend to
-install [node and npm](https://nodejs.org/en/download/package-manager/)
-yourself, you really only need [docker](https://docs.docker.com/get-docker/). After you have installed docker, you can make use of the
-following commands to dive into silverstripe development.
+We at Syntro GmbH use our own dev-helper called [ssdev](https://github.com/syntro-opensource/ssdev).
+Please go and check it out!
 
-> By default, our docker-compose setup is geared towards macOS. You can however
-> gear it towards linux by using a bind volume instead of a nfs one.
-> for this, simply change the volume to
-> ```yaml
-> x-host-volume: &host-volume
->   type: bind
->   source: ./
->   target: /var/www/html
-> ```
-> We are open for feedback concerning permission errors. Please [open an issue](https://github.com/syntro-opensource/silverstripe-ssto/issues)
-> if you stumble upon problems!
-
-Befor you can use the NFS-based volumes on macOS, you have to follow [these steps](https://firehydrant.io/blog/nfs-with-docker-on-macos-catalina/)
 ### Maintenance
 #### Serving Silverstripe
 To start the server via docker, run
 ```
-docker-compose up -d host
+npx ssdev serve
 ```
 This will start a host and database container running your project. To stop
 it, run
 ```
-docker-compose down
+npx ssdev down
 ```
 
 #### Installing dependencies
@@ -108,19 +90,16 @@ docker-compose down
 
 You can install dependencies by using
 ```
-docker-compose run --rm composer require new/module --ignore-platform-reqs
+npx ssdev run composer -- require new/module --ignore-platform-reqs
 ```
 Updating dependencies can be done with
 ```
-docker-compose run --rm composer update --ignore-platform-reqs
+npx ssdev run composer -- composer update --ignore-platform-reqs
 ```
 
 ### Theming
 After installation, you can use the included theming tools to build
-a Project. we use npm and recommend
-[installing it](https://nodejs.org/en/download/package-manager/) on your system
-natively for performance reasons. You can also use docker for any step,
-just prefix the command with `docker-compose run --rm`.
+a Project. we use npm for package management.
 
 We use webpack as buildtool and the included
 [syntro-opensource/webpack-config](https://github.com/syntro-opensource/webpack-config)
@@ -154,14 +133,14 @@ under `app/client/files/favicon.png` and run `npm run favicon`.
 By default, this recipe supplies PHPUnit, PHPCS and PHPStan for testing. you can
 run the Tests by running:
 ```
-docker-compose run --rm phpunit
+npx ssdev run -- phpunit
 ```
 ```
-docker-compose run --rm phpstan
+npx ssdev run -- phpstan
 ```
 ```
-docker-compose run --rm phpcs
-docker-compose run --rm phpcbf
+npx ssdev run -- phpcs
+npx ssdev run -- phpcbf
 ```
 
 ## Maintainers
