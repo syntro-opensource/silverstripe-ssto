@@ -83,7 +83,6 @@ jobs:
       #   if: ${{ matrix.php == '7.4' }}
   phpstan:
     name: 🔺 PHPStan
-    needs: phpunit
     runs-on: ubuntu-latest
     container: brettt89/silverstripe-web:7.4-apache
     steps:
@@ -105,7 +104,7 @@ jobs:
           path: |
             ${{ steps.composer-data.outputs.dir }}
             **/vendors
-          key: ${{ runner.os }}-composer-7.4-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-${{ matrix.php }}-
       - name: Install Dependencies
