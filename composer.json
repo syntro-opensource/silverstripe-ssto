@@ -12,7 +12,7 @@
         "php": ">=7.2.0",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "4.6.1",
-        "silverstripe/login-forms": "4.2.1",
+        "silverstripe/login-forms": "4.3.0",
         "syntro/recipe-elemental-bootstrap": "0.3.1",
         "syntro/silverstripe-seo": "1.0.3"
     },
