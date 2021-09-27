@@ -13,7 +13,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@syntro-opensource/browserslist-config-base": "^1.0.0",
     "@syntro-opensource/eslint-config-base": "^1.0.2",
-    "@syntro-opensource/webpack-config": "^1.1.0",
+    "@syntro-opensource/webpack-config": "^1.2.1",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
