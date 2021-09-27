@@ -27,8 +27,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # add or remove test envs according to your deployment
         php:
-          - 7.2
           - 7.3
           - 7.4
     container: brettt89/silverstripe-web:${{ matrix.php }}-apache
@@ -37,6 +37,7 @@ jobs:
         image: mysql:5.7
         ports:
           - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     env:
