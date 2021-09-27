@@ -4,7 +4,8 @@
     "build": "webpack --mode production",
     "favicon": "npm-run-all favicon-create favicon-insert",
     "favicon-create": "real-favicon generate faviconDescription.json faviconData.json app/client/dist/favicons",
-    "favicon-insert": "cp app/client/dist/favicons/html_code.html app/templates/Includes/Favicons.ss"
+    "favicon-insert": "cp app/client/dist/favicons/html_code.html app/templates/Includes/Favicons.ss",
+    "release": "git fetch && git-chglog -o CHANGELOG.md $([[ ! -z $npm_config_next ]] && echo \"--next-tag $npm_config_next\" )"
   },
   "browserslist": [
     "extends @syntro-opensource/browserslist-config-base"
