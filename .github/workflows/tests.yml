@@ -62,7 +62,7 @@ jobs:
         run: |
           echo "::set-output name=dir::$(composer config --global data-dir)"
       - name: Cache Composer Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.5
         with:
           path: |
             ${{ steps.composer-data.outputs.dir }}
@@ -101,7 +101,7 @@ jobs:
         run: |
           echo "::set-output name=dir::$(composer config --global data-dir)"
       - name: Cache Composer Cache and dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.5
         with:
           path: |
             ${{ steps.composer-data.outputs.dir }}
@@ -142,7 +142,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - name: Cache Node dependencies
-      uses: actions/cache@v2
+      uses: actions/cache@v2.1.5
       with:
         path: |
           **/node_modules
