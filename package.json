@@ -15,7 +15,7 @@
     "@syntro-opensource/eslint-config-base": "^1.0.2",
     "@syntro-opensource/webpack-config": "^1.1.0",
     "bootstrap": "^4.6.0",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
