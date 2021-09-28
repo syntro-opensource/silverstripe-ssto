@@ -52,6 +52,7 @@ npx ssdev init
 **When creating a new project using this recipe, follow these steps to customize your project:**
 
 * [ ] Rename the project in the `composer.json` file
+* [ ] Check the target php version in the `composer.json` file under the `config.platform` key (if using ssdev, delete otherwise)
 * [ ] Adapt/delete the workflows in `.github/workflows` to suit your needs
 * [ ] Create a favicon by following these steps:
     1. Place the desired logo/image in `app/client/files/favicon.png`
