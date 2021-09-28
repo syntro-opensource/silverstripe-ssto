@@ -52,7 +52,8 @@
     "config": {
         "process-timeout": 600,
         "platform": {
-             "php": "7.4.0"
+             "php": "7.4.0",
+             "ext-intl": "1.0.0"
         }
     },
     "scripts": {
