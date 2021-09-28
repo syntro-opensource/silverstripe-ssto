@@ -50,7 +50,10 @@
         "resources-dir": "_resources"
     },
     "config": {
-        "process-timeout": 600
+        "process-timeout": 600,
+        "platform": {
+             "php": "^7.4"
+        }
     },
     "scripts": {
         "phpcs": "~/.composer/vendor/bin/phpcs app/",
