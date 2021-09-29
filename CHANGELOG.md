@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.0.0"></a>
+## [2.0.0] - 2021-09-29
+### 🔧 Changed
+- update bootstrap-elemental-dependency to v1 ([#61](https://github.com/syntro-opensource/silverstripe-ssto/issues/61))
+
+### BREAKING CHANGE
+
+see [syntro/
+recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-elemental-bootstrap/releases/tag/1.0.0)
+
+
 <a name="1.5.0"></a>
 ## [1.5.0] - 2021-09-27
 ### 🍰 Added
@@ -120,7 +131,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.5.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.5.0...2.0.0
 [1.5.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.4.1...1.5.0
 [1.4.1]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.3.0...1.4.0
