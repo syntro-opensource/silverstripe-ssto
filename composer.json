@@ -15,6 +15,7 @@
         "silverstripe/login-forms": "4.4.3",
         "syntro/recipe-elemental-bootstrap": "1.0.0",
         "syntro/silverstripe-seo": "2.0.1",
+        "wilr/silverstripe-googlesitemaps": "2.2.0",
         "syntro/silvershare": "1.0.3"
     },
     "require-dev": {
