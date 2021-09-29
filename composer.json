@@ -13,8 +13,8 @@
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "4.8.0",
         "silverstripe/login-forms": "4.4.3",
-        "syntro/recipe-elemental-bootstrap": "0.4.1",
-        "syntro/silverstripe-seo": "2.0.0",
+        "syntro/recipe-elemental-bootstrap": "1.0.0",
+        "syntro/silverstripe-seo": "2.0.1",
         "syntro/silvershare": "1.0.3"
     },
     "require-dev": {
@@ -50,7 +50,11 @@
         "resources-dir": "_resources"
     },
     "config": {
-        "process-timeout": 600
+        "process-timeout": 600,
+        "platform": {
+             "php": "7.4",
+             "ext-intl": "1.0.0"
+        }
     },
     "scripts": {
         "phpcs": "~/.composer/vendor/bin/phpcs app/",
