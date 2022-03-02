@@ -56,7 +56,7 @@ jobs:
             | php && \
             mv -f composer.phar /usr/local/bin/composer
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Get Composer Cache Directory
         id: composer-data
         run: |
@@ -95,7 +95,7 @@ jobs:
             | php && \
             mv -f composer.phar /usr/local/bin/composer
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Get Composer Cache Directory
         id: composer-data
         run: |
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: lint
         uses: chindit/actions-phpcs@master
         with:
@@ -135,7 +135,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Install node
       uses: actions/setup-node@v2.4.0
       with:
