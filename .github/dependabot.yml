@@ -4,17 +4,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    assignees:
-      - 'mleutenegger'
+    commit-message:
+      prefix: Bump
   - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: "daily"
-    assignees:
-      - 'mleutenegger'
+    commit-message:
+      prefix: Bump
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: "daily"
-    assignees:
-      - 'mleutenegger'
+    commit-message:
+      prefix: Bump

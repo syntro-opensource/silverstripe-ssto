@@ -1,0 +1,67 @@
+name: 🚀 Deployment
+concurrency: production_environment
+on:
+  release:
+    types:
+      - published
+  push:
+    branches:
+      - master
+      - dep/action
+    paths-ignore:
+      - .chglog/**
+      - .github/**
+      - '!.github/workflows/deploy.yml'
+      - .editorconfig
+      - .gitattributes
+      - .gitignore
+      - .htaccess
+      - CHANGELOG.md
+      - code-of-conduct.md
+      - CONTRIBUTING.md
+      - LICENSE.md
+      - README.md
+
+jobs: {}
+  # stage:
+  #   name: 🦺 Deploy to Stage
+  #   if: ${{ github.event_name == 'push' }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v3
+  #   - name: Deploy to server
+  #     uses: syntro-opensource/action.deploy.silverstripe@v1.0.0
+  #     with:
+  #       host: < host_stage >
+  #       host_user: < host_user_stage >
+  #       private_key: ${{ secrets.PRIVATE_KEY_STAGE }}
+  #       working_dir: < working_dir_stage >
+  #       base_url: < base_url_stage >
+  #       admin_username: ${{ secrets.SS_ADMIN_USER_STAGE }}
+  #       admin_password: ${{ secrets.SS_ADMIN_PASS_STAGE }}
+  #       database_server: < database_server_stage >
+  #       database_name: < database_name_stage >
+  #       database_username: ${{ secrets.SS_DB_USER_STAGE }}
+  #       database_password: ${{ secrets.SS_DB_PASS_STAGE }}
+  # production:
+  #   name: 👔 Deploy to Production
+  #   if: ${{ github.event_name == 'release' }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v3
+  #   - name: Deploy to server
+  #     uses: syntro-opensource/action.deploy.silverstripe@v1.0.0
+  #     with:
+  #       host: < host >
+  #       host_user: < host_user_prod >
+  #       private_key: ${{ secrets.PRIVATE_KEY_PROD }}
+  #       working_dir: < working_dir_prod >
+  #       base_url: < base_url_prod >
+  #       admin_username: ${{ secrets.SS_ADMIN_USER_PROD }}
+  #       admin_password: ${{ secrets.SS_ADMIN_PASS_PROD }}
+  #       database_server: < database_server_prod >
+  #       database_name: < database_name_prod >
+  #       database_username: ${{ secrets.SS_DB_USER_PROD }}
+  #       database_password: ${{ secrets.SS_DB_PASS_PROD }}
