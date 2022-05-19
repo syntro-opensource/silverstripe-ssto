@@ -1,18 +1,16 @@
 <phpunit bootstrap="app/tests/bootstrap.php" colors="true">
-    <testsuite name="Default">
-        <directory>app/tests</directory>
-    </testsuite>
-    <!-- <groups>
+    <testsuites>
+        <testsuite name="Default">
+            <directory>app/tests</directory>
+        </testsuite>
+    </testsuites>
+    <!-- <groups> <exclude> <group>sanitychecks</group> </exclude> </groups> -->
+    <coverage>
         <exclude>
-            <group>sanitychecks</group>
+            <directory suffix=".php">vendor/</directory>
         </exclude>
-    </groups> -->
-    <filter>
-    <blacklist>
-        <directory suffix=".php">vendor/</directory>
-    </blacklist>
-    <whitelist>
-      <directory suffix=".php">app/src</directory>
-    </whitelist>
-  </filter>
+        <include>
+            <directory suffix=".php">app/src</directory>
+        </include>
+    </coverage>
 </phpunit>
