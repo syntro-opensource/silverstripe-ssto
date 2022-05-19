@@ -116,7 +116,7 @@ jobs:
           vendor/bin/phpstan analyse app/src \
             --memory-limit=1G \
             -c phpstan.neon \
-            -a vendor/symbiote/silverstripe-phpstan/bootstrap.php \
+            -a vendor/syntro/silverstripe-phpstan/bootstrap.php \
             --no-ansi \
             --level 4
   phpcs:

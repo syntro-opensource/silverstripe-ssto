@@ -12,11 +12,13 @@ namespace {
     class Page extends SiteTree
     {
         /**
+         * @config
          * @var array
          */
         private static $db = [];
 
         /**
+         * @config
          * @var array
          */
         private static $has_one = [];

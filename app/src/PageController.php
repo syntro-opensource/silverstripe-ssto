@@ -24,6 +24,7 @@ namespace {
          * ];
          * </code>
          *
+         * @config
          * @var array
          */
         private static $allowed_actions = [];
