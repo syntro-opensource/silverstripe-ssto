@@ -22,3 +22,7 @@ If you have a running app, check these steps to customize the project:
 * [ ] update the `.chglog/config.yml` with your new repositrory URL and run `npm run release --next="1.0.0"`
 * [ ] Adapt the Theme to your needs
 * [ ] Customize the Readme
+* [ ] Adapt/delete the license
+* [ ] Adapt/delete the contributing guide
+* [ ] Adapt/delete the changelog
+* [ ] Delete this checklist file
