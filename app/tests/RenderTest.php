@@ -16,6 +16,7 @@ class RenderTest extends FunctionalTest
     protected static $fixture_file = './PageTest.yml';
 
 
+
     /**
      * Test Footer on Homepage
      * @return void
