@@ -32,7 +32,7 @@ jobs:
     uses: syntro-opensource/workflows/.github/workflows/silverstripe-phpunit.yml@master
     with:
       suite: app/tests/
-      php_version: '8.0' # Choose the PHP Version you are using in prod!
+      php_version: '7.4' # Choose the PHP Version you are using in prod!
   phpcs:
     name: 🔮 PHPcs
     uses: syntro-opensource/workflows/.github/workflows/silverstripe-phpcs.yml@master
