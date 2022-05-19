@@ -42,7 +42,7 @@ jobs:
   #   Client
   # ----------------------
   eslint-back:
-    name: 🔮 ESLint - Backend
+    name: 🔮 ESLint - Global JS
     uses: syntro-opensource/workflows/.github/workflows/js-eslint.yml@master
     with:
       dir: app/client/src/global/
