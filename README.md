@@ -1,4 +1,4 @@
-# Syntro Silverstripe SSTO
+# Syntro Silverstripe SSTO 🌍 🚀 ✨
 
 [![🎭 Tests](https://github.com/syntro-opensource/silverstripe-ssto/actions/workflows/tests.yml/badge.svg)](https://github.com/syntro-opensource/silverstripe-ssto/actions/workflows/tests.yml)
 ![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen?logo=dependabot)
