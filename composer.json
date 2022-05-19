@@ -19,7 +19,7 @@
         "syntro/silvershare": "1.0.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^9.4",
         "syntro/silverstripe-phpstan": "^1.0",
         "squizlabs/php_codesniffer": "*"
     },
