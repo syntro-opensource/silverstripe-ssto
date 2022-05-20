@@ -47,7 +47,10 @@
             "app/client/files",
             "favicon.ico"
         ],
-        "resources-dir": "_resources"
+        "resources-dir": "_resources",
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        }
     },
     "config": {
         "process-timeout": 600,
