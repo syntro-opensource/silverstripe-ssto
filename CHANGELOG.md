@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.1.0"></a>
+## [2.1.0] - 2022-05-20
+### 🍰 Added
+- useful starting test ([#90](https://github.com/syntro-opensource/silverstripe-ssto/issues/90))
+- deployment templates
+- google sitemaps
+
+### 🔧 Changed
+- Improved docs
+- added custom prefix for dependabot PRs
+- use prefab workflows ([#88](https://github.com/syntro-opensource/silverstripe-ssto/issues/88))
+- Use Syntro PHPStan module ([#86](https://github.com/syntro-opensource/silverstripe-ssto/issues/86))
+
+### 🧬 Composer Dependencies
+- silverstripe/recipe-cms requirement from 4.8.0 to 4.10.0 ([#72](https://github.com/syntro-opensource/silverstripe-ssto/issues/72))
+
+### 🧬 Dependencies
+- browserslist from 1.0.30001260 to 1.0.30001341
+- Bump [@fortawesome](https://github.com/fortawesome)/fontawesome-free from 5.15.4 to 6.1.1 ([#80](https://github.com/syntro-opensource/silverstripe-ssto/issues/80))
+- Bump bootstrap from 4.6.0 to 5.1.3
+- Update wilr/silverstripe-googlesitemaps requirement from 2.2.0 to 2.2.1 ([#70](https://github.com/syntro-opensource/silverstripe-ssto/issues/70))
+- Update syntro/silverstripe-seo requirement from 2.0.1 to 2.1.1 ([#77](https://github.com/syntro-opensource/silverstripe-ssto/issues/77))
+- Update silverstripe/login-forms requirement from 4.4.3 to 4.6.0 ([#89](https://github.com/syntro-opensource/silverstripe-ssto/issues/89))
+- Update phpunit/phpunit requirement from ^5.7 to ^9.5 ([#87](https://github.com/syntro-opensource/silverstripe-ssto/issues/87))
+- Update silverstripe/recipe-cms requirement from 4.8.0 to 4.10.0 ([#72](https://github.com/syntro-opensource/silverstripe-ssto/issues/72))
+
+
 <a name="2.0.0"></a>
 ## [2.0.0] - 2021-09-29
 ### 🔧 Changed
@@ -131,7 +158,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...HEAD
+[2.1.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.5.0...2.0.0
 [1.5.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.4.1...1.5.0
 [1.4.1]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.4.0...1.4.1
