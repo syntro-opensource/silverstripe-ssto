@@ -18,7 +18,7 @@
 // $cyan:    #0dcaf0 !default;
 
 // insert own theme colors here
-$theme-colors: (
+$custom-colors: (
   'primary': #166f8f
 ) !default;
 
@@ -34,3 +34,4 @@ $navbar-height:                     56px !default;
 
 // add nohing after this line
 @import '~bootstrap/scss/bootstrap';
+$theme-colors: map-merge($theme-colors, $custom-colors);

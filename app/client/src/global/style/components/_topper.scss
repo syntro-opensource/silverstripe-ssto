@@ -11,7 +11,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: theme-color(primary);
+  background-color: $primary;
   transition: transform .5s, opacity .5s;
   @extend .text-white;
   &--out {

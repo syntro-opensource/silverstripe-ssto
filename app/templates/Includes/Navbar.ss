@@ -4,7 +4,7 @@
             <img src="$resourceURL('app/client/files/favicon.png')" height="30" class="d-inline-block align-top" alt="" loading="lazy">
             Syntro
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -13,7 +13,7 @@
                 <% loop $Menu(1) %>
                     <% if $Children %>
                         <li class="nav-item dropdown <% if $isCurrent || $isSection %>active<% end_if %>">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-$ID" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-$ID" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 $MenuTitle<% if $isCurrent || $isSection %> <span class="sr-only">(aktiv)</span><% end_if %>
                             </a>
                             <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown-$ID">
