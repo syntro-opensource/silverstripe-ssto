@@ -16,7 +16,7 @@ Featured are:
 
 To get started, simply run: *(see [ssdev](https://github.com/syntro-opensource/ssdev) for more info on our devenv.)*
 ```
-npx ssdev init -r syntro/ssto^2 projectname
+npx ssdev init -r syntro/ssto:^2 projectname
 ```
 > After installation, consult the [checklist](docs/checklist.md) to make the newly
 > created project your own. Then, you should replace this part of the readme with
