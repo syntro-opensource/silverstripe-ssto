@@ -16,7 +16,7 @@
         "syntro/recipe-elemental-bootstrap": "1.0.0",
         "syntro/silverstripe-seo": "2.1.1",
         "wilr/silverstripe-googlesitemaps": "2.2.1",
-        "syntro/silvershare": "1.0.3"
+        "syntro/silvershare": "1.0.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
