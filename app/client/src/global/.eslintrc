@@ -1,1 +1,1 @@
-extends: @syntro-opensource/eslint-config-base
+extends: "@syntro-opensource/eslint-config-base"

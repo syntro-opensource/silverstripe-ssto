@@ -1,0 +1,13 @@
+// stylelint-disable scss/dollar-variable-default
+
+/**
+ * Add custom overwrites of bootstrap sass variables here.
+ * see: https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults
+ */
+
+// Theme Colors
+$primary: #116fd1;
+
+// Typography
+$font-family-base: roboto, system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$headings-font-family: handlee, system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

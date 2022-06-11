@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "webpack --watch --mode development",
+    "watch": "webpack --watch --progress --mode development",
     "build": "webpack --mode production",
     "favicon": "npm-run-all favicon-create favicon-insert",
     "favicon-create": "real-favicon generate faviconDescription.json faviconData.json app/client/dist/favicons",

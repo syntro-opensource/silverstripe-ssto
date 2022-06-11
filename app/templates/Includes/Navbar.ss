@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" id="Navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top" id="Navbar">
     <div class="container">
         <a class="navbar-brand">
             <img src="$resourceURL('app/client/files/favicon.png')" height="30" class="d-inline-block align-top" alt="" loading="lazy">

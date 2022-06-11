@@ -1,15 +1,8 @@
 @import 'bootstrap';
-@import 'mixins/main';
-@import 'components/main';
-@import 'elements/main';
+@import 'custom';
+@import 'vendors';
 @import 'syntro';
-@import 'fontawesome';
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  padding-top: $navbar-height;
 }
