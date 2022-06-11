@@ -8,6 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.2.0"></a>
+## [2.2.0] - 2022-06-11
+### 🍰 Added
+- Testsuite now features a stylelint check ([#95](https://github.com/syntro-opensource/silverstripe-ssto/issues/95))
+- HTMLEditor includes css by default
+
+### 🐞 Fixed
+- composer scripts now correctly feature local phpcs calls
+- asset directory in public webroot added to .gitignore (fixes [#92](https://github.com/syntro-opensource/silverstripe-ssto/issues/92))
+
+### 🔧 Changed
+- updated filestructure in styles to be more compliant with internal patterns
+- `.eslint` in global bundle uses yaml syntax
+
+### 🧬 Dependencies
+- Bump bootstrap from 5.1.3 to 5.2.0-beta
+- Bump [@syntro](https://github.com/syntro)-opensource/eslint-config-base from 1.0.2 to 1.1.0 ([#93](https://github.com/syntro-opensource/silverstripe-ssto/issues/93))
+- Bump [@syntro](https://github.com/syntro)-opensource/webpack-config from 1.2.1 to 1.3.0 ([#94](https://github.com/syntro-opensource/silverstripe-ssto/issues/94))
+- Update syntro/silvershare requirement from 1.0.3 to 1.0.4 ([#91](https://github.com/syntro-opensource/silverstripe-ssto/issues/91))
+
+
 <a name="2.1.0"></a>
 ## [2.1.0] - 2022-05-20
 ### 🍰 Added
@@ -158,7 +179,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...HEAD
+[2.2.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.5.0...2.0.0
 [1.5.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.4.1...1.5.0
