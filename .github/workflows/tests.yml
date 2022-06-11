@@ -42,13 +42,13 @@ jobs:
   #   Client
   # ----------------------
   eslint-client:
-    name: 🔮 ESLint - Global JS
+    name: 🔮 ESLint - Client Global JS
     uses: syntro-opensource/workflows/.github/workflows/js-eslint.yml@master
     with:
       dir: app/client/src/global/
       configfile: app/client/src/global/.eslintrc
   stylelint-client:
-    name: 🔮 Stylelint - Global JS
+    name: 🔮 Stylelint - Client SCSS
     uses: syntro-opensource/workflows/.github/workflows/scss-stylelint.yml@master
     with:
       glob: app/client/src/**/*.scss
