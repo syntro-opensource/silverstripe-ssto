@@ -60,9 +60,9 @@
         }
     },
     "scripts": {
-        "phpcs": "~/.composer/vendor/bin/phpcs app/",
-        "phpcbf": "~/.composer/vendor/bin/phpcbf app/",
-        "phpstan": "vendor/bin/phpstan analyse app/src --memory-limit=1G -c phpstan.neon -a vendor/symbiote/silverstripe-phpstan/bootstrap.php --no-ansi --level 4",
+        "phpcs": "vendorbin/phpcs app/",
+        "phpcbf": "vendor/bin/phpcbf app/",
+        "phpstan": "vendor/bin/phpstan analyse app/src --memory-limit=1G -c phpstan.neon -a vendor/syntro/silverstripe-phpstan/bootstrap.php --no-ansi --level 4",
         "phpunit": "vendor/bin/phpunit app/tests/"
     },
     "prefer-stable": true,
