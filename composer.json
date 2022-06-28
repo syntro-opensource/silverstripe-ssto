@@ -11,7 +11,7 @@
     "require": {
         "php": ">=7.4.0",
         "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "4.10.0",
+        "silverstripe/recipe-cms": "4.11.0",
         "silverstripe/login-forms": "4.6.0",
         "syntro/recipe-elemental-bootstrap": "1.0.0",
         "syntro/silverstripe-seo": "2.1.1",
