@@ -38,7 +38,7 @@ jobs:
   #   Client
   # ----------------------
   client:
-    name: ▶️ Client Code Testsuite
+    name: ▶️ Client Assets Testsuite
     uses: syntro-opensource/workflows/.github/workflows/client.yml@master
     with:
       eslint: true
