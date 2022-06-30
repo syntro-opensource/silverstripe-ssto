@@ -19,25 +19,21 @@ jobs:
   # ----------------------
   #   Silverstipe / PHP
   # ----------------------
-  # behat:
-  #   name: 🐝 Behat
-  #   uses: syntro-opensource/workflows/.github/workflows/silverstripe-behat.yml@master
-  phpstan:
-    name: 🔺 PHPStan
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe-phpstan.yml@master
+  silverstripe:
+    name: Silverstripe Testsuite
+    uses: syntro-opensource/workflows/.github/workflows/silverstripe.yml@master
     with:
-      dir: app/src/
-  phpunit:
-    name: 🧩 PHPUnit
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe-phpunit.yml@master
-    with:
-      suite: app/tests/
-      php_version: '7.4' # Choose the PHP Version you are using in prod!
-  phpcs:
-    name: 🔮 PHPcs
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe-phpcs.yml@master
-    with:
-      dir: app/
+      phpunit: true
+      phpunit_suite: app/tests/
+      # phpunit_config_file:
+      phpunit_php_version: '7.4'
+      phpstan: true
+      phpstan_dir: app/src/
+      phpstan_php_version: '7.4'
+      phpcs: true
+      phpcs_dir: app/
+      # behat: false
+      # behat_php_version: '7.4'
   # ----------------------
   #   Client
   # ----------------------
