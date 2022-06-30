@@ -20,7 +20,7 @@ jobs:
   #   Silverstipe / PHP
   # ----------------------
   silverstripe:
-    name: Silverstripe Testsuite
+    name: ▶️ Silverstripe Testsuite
     uses: syntro-opensource/workflows/.github/workflows/silverstripe.yml@master
     with:
       phpunit: true
@@ -37,14 +37,15 @@ jobs:
   # ----------------------
   #   Client
   # ----------------------
-  eslint-client:
-    name: 🔮 ESLint - Client Global JS
-    uses: syntro-opensource/workflows/.github/workflows/js-eslint.yml@master
+  client:
+    name: ▶️ Client Code Testsuite
+    uses: syntro-opensource/workflows/.github/workflows/client.yml@master
     with:
-      dir: app/client/src/global/
-      configfile: app/client/src/global/.eslintrc
-  stylelint-client:
-    name: 🔮 Stylelint - Client SCSS
-    uses: syntro-opensource/workflows/.github/workflows/scss-stylelint.yml@master
-    with:
-      glob: app/client/src/**/*.scss
+      eslint: true
+      eslint_dir: app/client/src/global/
+      eslint_configfile: app/client/src/global/.eslintrc
+      # eslint_ext:
+      # eslint_max-warnings:
+      stylelint: true
+      stylelint_glob: app/client/src/**/*.scss
+      # stylelint_max-warnings:
