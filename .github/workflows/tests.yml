@@ -20,7 +20,7 @@ jobs:
   #   Silverstipe / PHP
   # ----------------------
   silverstripe:
-    name: ▶️ Silverstripe Testsuite
+    name: 🧰 Silverstripe Testsuite
     uses: syntro-opensource/workflows/.github/workflows/silverstripe.yml@master
     with:
       phpunit: true
@@ -38,7 +38,7 @@ jobs:
   #   Client
   # ----------------------
   client:
-    name: ▶️ Client Assets Testsuite
+    name: 📦 Client Assets Testsuite
     uses: syntro-opensource/workflows/.github/workflows/client.yml@master
     with:
       eslint: true
