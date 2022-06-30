@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.3.0"></a>
+## [2.3.0] - 2022-06-30
+### 🐞 Fixed
+- keep the public directory
+
+### 🔧 Changed
+- update default PHP version to `8.1` ([#99](https://github.com/syntro-opensource/silverstripe-ssto/issues/99))
+- use complete testsuite for tests ([#98](https://github.com/syntro-opensource/silverstripe-ssto/issues/98))
+
+### 🧬 Dependencies
+- Update silverstripe/login-forms requirement from 4.6.0 to 4.7.0 ([#96](https://github.com/syntro-opensource/silverstripe-ssto/issues/96))
+- Update silverstripe/recipe-cms requirement from 4.10.0 to 4.11.0 ([#97](https://github.com/syntro-opensource/silverstripe-ssto/issues/97))
+
+
 <a name="2.2.0"></a>
 ## [2.2.0] - 2022-06-11
 ### 🍰 Added
@@ -179,7 +193,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.3.0...HEAD
+[2.3.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...2.3.0
 [2.2.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/1.5.0...2.0.0
