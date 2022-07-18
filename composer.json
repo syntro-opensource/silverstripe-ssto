@@ -57,6 +57,11 @@
         "platform": {
              "php": "8.1",
              "ext-intl": "1.0.0"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true,
+            "silverstripe/recipe-plugin": true
         }
     },
     "scripts": {
