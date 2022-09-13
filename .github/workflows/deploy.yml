@@ -44,6 +44,7 @@ jobs: {}
   #       database_name: < database_name_stage >
   #       database_username: ${{ secrets.SS_DB_USER_STAGE }}
   #       database_password: ${{ secrets.SS_DB_PASS_STAGE }}
+  #       htaccess_template: .deploy/.htaccess.j2
   # production:
   #   name: 👔 Deploy to Production
   #   if: ${{ github.event_name == 'release' }}
@@ -65,3 +66,4 @@ jobs: {}
   #       database_name: < database_name_prod >
   #       database_username: ${{ secrets.SS_DB_USER_PROD }}
   #       database_password: ${{ secrets.SS_DB_PASS_PROD }}
+  #       htaccess_template: .deploy/.htaccess.j2
