@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.4.0"></a>
+## [2.4.0] - 2022-09-13
+### 🍰 Added
+- Default .htaccess template for deployment action
+- `allow-plugins` for composer
+
+### 🗑 Removed
+- no platform informations in composer.json anymore
+
+### 🧬 Dependencies
+- Bump bootstrap from 5.2.0-beta1 to 5.2.0 ([#103](https://github.com/syntro-opensource/silverstripe-ssto/issues/103))
+- Update syntro/silverstripe-seo requirement from 2.1.1 to 2.2.0 ([#101](https://github.com/syntro-opensource/silverstripe-ssto/issues/101))
+- Bump [@syntro](https://github.com/syntro)-opensource/webpack-config from 1.3.1 to 1.3.2 ([#102](https://github.com/syntro-opensource/silverstripe-ssto/issues/102))
+- Bump [@syntro](https://github.com/syntro)-opensource/webpack-config from 1.3.0 to 1.3.1 ([#100](https://github.com/syntro-opensource/silverstripe-ssto/issues/100))
+
+
 <a name="2.3.0"></a>
 ## [2.3.0] - 2022-06-30
 ### 🐞 Fixed
@@ -193,7 +209,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.3.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.0...HEAD
+[2.4.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.3.0...2.4.0
 [2.3.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...2.3.0
 [2.2.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.0.0...2.1.0
