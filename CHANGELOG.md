@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.4.1"></a>
+## [2.4.1] - 2022-09-13
+### 🐞 Fixed
+- npm vulnerabilities
+
+### 🧬 Dependencies
+- Bump [@syntro](https://github.com/syntro)-opensource/eslint-config-base from 1.1.0 to 1.1.1 ([#105](https://github.com/syntro-opensource/silverstripe-ssto/issues/105))
+- Update syntro/recipe-elemental-bootstrap requirement ([#106](https://github.com/syntro-opensource/silverstripe-ssto/issues/106))
+- Bump [@fortawesome](https://github.com/fortawesome)/fontawesome-free from 6.1.1 to 6.2.0 ([#108](https://github.com/syntro-opensource/silverstripe-ssto/issues/108))
+- Bump bootstrap from 5.2.0 to 5.2.1 ([#109](https://github.com/syntro-opensource/silverstripe-ssto/issues/109))
+
+
 <a name="2.4.0"></a>
 ## [2.4.0] - 2022-09-13
 ### 🍰 Added
@@ -209,7 +221,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.1...HEAD
+[2.4.1]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.3.0...2.4.0
 [2.3.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...2.3.0
 [2.2.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.1.0...2.2.0
