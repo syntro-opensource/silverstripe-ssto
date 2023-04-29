@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+<a name="2.4.2"></a>
+## [2.4.2] - 2023-04-29
+### 🧬 Dependencies
+- Bump [@syntro](https://github.com/syntro)-opensource/eslint-config-base from 1.1.1 to 1.1.2 ([#110](https://github.com/syntro-opensource/silverstripe-ssto/issues/110))
+- Bump bootstrap from 5.2.1 to 5.2.3 ([#114](https://github.com/syntro-opensource/silverstripe-ssto/issues/114))
+- Update syntro/silverstripe-seo requirement from 2.2.0 to 2.2.1 ([#111](https://github.com/syntro-opensource/silverstripe-ssto/issues/111))
+- Update silverstripe/login-forms requirement from 4.7.0 to 4.9.0 ([#121](https://github.com/syntro-opensource/silverstripe-ssto/issues/121))
+- Bump [@fortawesome](https://github.com/fortawesome)/fontawesome-free from 6.3.0 to 6.4.0 ([#122](https://github.com/syntro-opensource/silverstripe-ssto/issues/122))
+- Update silverstripe/recipe-cms requirement from 4.11.0 to 4.13.0 ([#120](https://github.com/syntro-opensource/silverstripe-ssto/issues/120))
+- Bump [@fortawesome](https://github.com/fortawesome)/fontawesome-free from 6.2.0 to 6.3.0 ([#118](https://github.com/syntro-opensource/silverstripe-ssto/issues/118))
+- Bump [@syntro](https://github.com/syntro)-opensource/webpack-config from 1.3.2 to 1.4.0 ([#119](https://github.com/syntro-opensource/silverstripe-ssto/issues/119))
+
+
 <a name="2.4.1"></a>
 ## [2.4.1] - 2022-09-13
 ### 🐞 Fixed
@@ -221,7 +234,8 @@ recipe-elemental-bootstrap ](https://github.com/syntro-opensource/recipe-element
 - Merge pull request [#4](https://github.com/syntro-opensource/silverstripe-ssto/issues/4) from syntro-opensource/dependabot/composer/syntro/recipe-elemental-bootstrap-0.1.1
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.1...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.2...HEAD
+[2.4.2]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.1...2.4.2
 [2.4.1]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.3.0...2.4.0
 [2.3.0]: https://github.com/syntro-opensource/silverstripe-ssto/compare/2.2.0...2.3.0
