@@ -22,7 +22,7 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "cli-real-favicon": "0.0.8",
+    "cli-real-favicon": "0.0.9",
     "npm-run-all": "^4.1.5"
   }
 }
