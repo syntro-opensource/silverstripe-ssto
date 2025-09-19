@@ -1,6 +1,6 @@
 {
 	"masterPicture": "app/client/files/favicon.png",
-	"iconsPath": "_resources/app/client/dist/favicons",
+	"iconsPath": "_resources/app/client/dist/favicons/",
 	"design": {
 		"ios": {
 			"pictureAspect": "backgroundAndMargin",
