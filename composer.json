@@ -18,9 +18,9 @@
         "syntro/silverstripe-seo": "^6.0"
     },
     "require-dev": {
-        "syntro/silverstripe-phpstan": "^6.0",
         "phpunit/phpunit": "^11.0",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "cambis/silverstan": "^2.1"
     },
     "extra": {
         "expose": [
