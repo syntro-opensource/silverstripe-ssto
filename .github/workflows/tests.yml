@@ -21,10 +21,11 @@ jobs:
   # ----------------------
   silverstripe-module-6:
     name: 🧰 Silverstripe Module Testsuite 6
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe-module-6.yml@master
+    uses: cotpat/workflows/.github/workflows/silverstripe-module-6.yml@patch-2
     with:
       phpunit: true
       phpstan: true
+      phpstan_srcdir: 'app/src'
   # ----------------------
   #   Client
   # ----------------------
