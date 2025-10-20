@@ -19,21 +19,12 @@ jobs:
   # ----------------------
   #   Silverstipe / PHP
   # ----------------------
-  silverstripe:
-    name: 🧰 Silverstripe Testsuite
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe.yml@master
+  silverstripe-module-6:
+    name: 🧰 Silverstripe Module Testsuite 6
+    uses: syntro-opensource/workflows/.github/workflows/silverstripe-module-6.yml@master
     with:
       phpunit: true
-      phpunit_suite: app/tests/
-      # phpunit_config_file:
-      phpunit_php_version: '8.3'
       phpstan: true
-      phpstan_dir: app/src/
-      phpstan_php_version: '8.3'
-      phpcs: true
-      phpcs_dir: app/
-      # behat: false
-      # behat_php_version: '8.1'
   # ----------------------
   #   Client
   # ----------------------
