@@ -26,10 +26,10 @@ jobs:
       phpunit: true
       phpunit_suite: app/tests/
       # phpunit_config_file:
-      phpunit_php_version: '8.1'
+      phpunit_php_version: '8.3'
       phpstan: true
       phpstan_dir: app/src/
-      phpstan_php_version: '8.1'
+      phpstan_php_version: '8.3'
       phpcs: true
       phpcs_dir: app/
       # behat: false
