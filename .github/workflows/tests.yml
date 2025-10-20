@@ -21,7 +21,7 @@ jobs:
   # ----------------------
   silverstripe:
     name: 🧰 Silverstripe Testsuite
-    uses: syntro-opensource/workflows/.github/workflows/silverstripe.yml@master
+    uses: cotpat/workflows/.github/workflows/silverstripe.yml@patch-3
     with:
       phpunit: true
       phpunit_suite: app/tests/
